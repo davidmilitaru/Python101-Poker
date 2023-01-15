@@ -30,7 +30,7 @@ class Poker (object):
         ranklist=[]
         for card in sortedHand:
             ranklist.append(card.rank)
-        c_sum=ranklist[0]*10**4+ranklist[1]*10**3+ranklist[2]*10**2+ranklist[3]*10+ranklist[4]
+        c_sum=ranklist[0]*13**4+ranklist[1]*13**3+ranklist[2]*13**2+ranklist[3]*13+ranklist[4]
         return c_sum
 
       
@@ -40,7 +40,7 @@ class Poker (object):
         h=10
         current_suit=sorted_hand[0].suit
         current_rank=14
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         for card in sorted_hand:
             if card.suit!=current_suit or card.rank!=current_rank:
                 flag=False
@@ -61,7 +61,7 @@ class Poker (object):
         h=9
         current_suit=sorted_hand[0].suit
         current_rank=sorted_hand[0].rank
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         for card in sorted_hand:
             if card.suit!=current_suit or card.rank!=current_rank:
                 flag=False
@@ -81,7 +81,7 @@ class Poker (object):
         h=8
         current_rank=sorted_hand[1].rank     
         count=0
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         for card in sorted_hand:
             if card.rank == current_rank:
                 count+=1
@@ -98,7 +98,7 @@ class Poker (object):
         sorted_hand = sorted(hand, reverse=True)
         flag=True
         h=7
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         mylist=[]                                 
         for card in sorted_hand:
             mylist.append(card.rank)
@@ -120,7 +120,7 @@ class Poker (object):
         sorted_hand = sorted(hand,reverse=True)
         flag=True
         h=6
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         current_suit=sorted_hand[0].suit
         for card in sorted_hand:
             if not(card.suit == current_suit):
@@ -138,7 +138,7 @@ class Poker (object):
         sorted_hand = sorted(hand,reverse=True)
         flag=True
         h=5
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         current_rank = sorted_hand[0].rank
         for card in sorted_hand:
             if card.rank != current_rank:
@@ -158,7 +158,7 @@ class Poker (object):
         sorted_hand = sorted(hand, reverse=True)
         flag=True
         h=4
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         current_rank = sorted_hand[2].rank
         mylist=[]
         for card in sorted_hand:
@@ -177,8 +177,8 @@ class Poker (object):
         sorted_hand = sorted(hand, reverse=True)
         flag=True
         h=3
-        total_point=h*10**5+self.point(sorted_hand)
-        rank1=sorted_hand[1].rank                      
+        total_point=h*13**5+self.point(sorted_hand)
+        rank1=sorted_hand[1].rank                        
         rank2=sorted_hand[3].rank
         mylist=[]
         for card in sorted_hand:
@@ -197,9 +197,9 @@ class Poker (object):
         sorted_hand = sorted(hand,reverse=True)
         flag=True
         h=2
-        total_point=h*10**5+self.point(sorted_hand)
-        mylist=[]                                       
-        mycount=[]                                    
+        total_point=h*13**5+self.point(sorted_hand)
+        mylist=[]                               
+        mycount=[]                                      
         for card in sorted_hand:
             mylist.append(card.rank)
         for each in mylist:
@@ -219,7 +219,7 @@ class Poker (object):
         sorted_hand = sorted(hand, reverse=True)
         flag=True
         h=1
-        total_point=h*10**5+self.point(sorted_hand)
+        total_point=h*13**5+self.point(sorted_hand)
         mylist=[]                                     
         for card in sorted_hand:
             mylist.append(card.rank)
