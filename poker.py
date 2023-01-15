@@ -99,10 +99,10 @@ class Poker (object):
         flag=True
         h=7
         total_point=h*10**5+self.point(sorted_hand)
-        mylist=[]                                 #create a list to store ranks
+        mylist=[]                                 
         for card in sorted_hand:
             mylist.append(card.rank)
-        rank1 = sorted_hand[0].rank                  #The 1st rank and the last rank should be different in a sorted list
+        rank1 = sorted_hand[0].rank                  
         rank2 = sorted_hand[-1].rank
         num_rank1 = mylist.count(rank1)
         num_rank2 = mylist.count(rank2)
@@ -178,7 +178,7 @@ class Poker (object):
         flag=True
         h=3
         total_point=h*10**5+self.point(sorted_hand)
-        rank1=sorted_hand[1].rank                        #in a five cards sorted group, if isTwo(), the 2nd and 4th card should have another identical rank
+        rank1=sorted_hand[1].rank                      
         rank2=sorted_hand[3].rank
         mylist=[]
         for card in sorted_hand:
@@ -198,14 +198,14 @@ class Poker (object):
         flag=True
         h=2
         total_point=h*10**5+self.point(sorted_hand)
-        mylist=[]                                       #create an empty list to store ranks
-        mycount=[]                                      #create an empty list to store number of count of each rank
+        mylist=[]                                       
+        mycount=[]                                    
         for card in sorted_hand:
             mylist.append(card.rank)
         for each in mylist:
             count=mylist.count(each)
             mycount.append(count)
-        if mycount.count(2)==2 and mycount.count(1)==3:  #There should be only 2 identical numbers and the rest are all different
+        if mycount.count(2)==2 and mycount.count(1)==3:  
             flag=True
             print ("One Pair")
             self.tlist.append(total_point)
@@ -220,7 +220,7 @@ class Poker (object):
         flag=True
         h=1
         total_point=h*10**5+self.point(sorted_hand)
-        mylist=[]                                       #create a list to store ranks
+        mylist=[]                                     
         for card in sorted_hand:
             mylist.append(card.rank)
         print ("High Card")
