@@ -12,7 +12,7 @@ def main ():
         counter += 1
 
     game_won = counter
-    while (game_won == counter):
+    while (game_won == counter):        #a little ambiguous, but as long as nobody hit 52 points, this while loop will not end
         game = pkr.Poker (nr_players)
         game.play()
         print('\n')
@@ -29,7 +29,7 @@ def main ():
 
         for i in range(nr_players):
             if multiple_games_list[i] >= 52:
-                game_won -= 1
+                game_won -= 1           #so as to exit the while loop and declare the winner
                 print(multiple_games_list)
                 print(f"Player {maxindex + 1} has won the game!")
   
